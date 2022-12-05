@@ -3,14 +3,20 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "test": "vitest --config ./vitest.config.ts",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.0.0-rc.14"
+    "nuxt": "^3.0.0-rc.14",
+    "vitest": "^0.25.3"
   },
   "dependencies": {
-    "image-downloader": "^4.3.0"
+    "@nuxt/test-utils-edge": "^3.0.1-rc.0-27837437.9c478ee",
+    "@types/jsdom": "^20.0.1",
+    "image-downloader": "^4.3.0",
+    "jsdom": "^20.0.3",
+    "playwright": "^1.28.1"
   }
 }

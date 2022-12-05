@@ -1,11 +1,21 @@
 <template>
     <div>
-        <button @click="$emit('inline-click')">Inline Event Emitter</button>
+        <button @click="handleClick">Inline Event Emitter</button>
+        <div id="toggle-div" v-if="show">
+            <p>Hidden text here!</p>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
-defineEmits<{
+const emit = defineEmits<{
     (e: 'inline-click'): void
 }>()
+
+const show = ref(false)
+
+const handleClick = () => {
+    show.value = !show.value
+    emit('inline-click')
+}
 </script>
